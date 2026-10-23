@@ -1,0 +1,126 @@
+# ===== report er jonno: proti function er ekta example =====
+# Format: "# title:" card er nam, "# note:" byakkha, "# input:" nao() er jonno keyboard input
+# Title chhara line gulo chupchap chole (setup hishebe).
+
+# title: Setup: variable ar list (dhori)
+# note: 'dhori' diye variable banano hoy. [ ] diye list. Parser eke 'Let' node banay, tar niche List, tar niche 5 ta Num.
+dhori marks = [70, 85, 60, 95, 85]
+
+# title: 1. Add -> jog
+# note: Parser ekta Call node (jog) banay, tar 2 ta child: 10 ar 5. Interpreter 10 + 5 kore.
+jog(10, 5)
+
+# title: 2. Subtract -> biyog
+# note: Call node biyog, child 10 ar 5. Interpreter 10 - 5 kore.
+biyog(10, 5)
+
+# title: 3. Multiply -> gun
+# note: Call node gun, child 10 ar 5. Interpreter 10 * 5 kore.
+gun(10, 5)
+
+# title: 4. Divide -> vag
+# note: 10 / 4 = 2.5. Jodi 2nd number 0 hoy tahole error dey (Shunno diye vag kora jay na).
+vag(10, 4)
+
+# title: 5. Modulus -> vagsesh
+# note: 10 ke 3 diye vag korle vagsesh 1 thake.
+vagsesh(10, 3)
+
+# title: 6. Power -> ghat
+# note: 2 er ghat 8 = 2 * 2 * ... (8 bar) = 256.
+ghat(2, 8)
+
+# title: 7. Average -> gor
+# note: Argument hishebe pura list (marks) dewa hoyeche. (70+85+60+95+85) / 5 = 79.
+gor(marks)
+
+# title: 8. Maximum -> boro
+# note: List er shobcheye boro number.
+boro(marks)
+
+# title: 9. Minimum -> choto
+# note: List er shobcheye chhoto number.
+choto(marks)
+
+# title: 10. Print -> dekhao
+# note: Output screen e dekhay. Parser er tree te text ekta Str node.
+dekhao("Hello CompileX")
+
+# title: 11. Input -> nao
+# note: User er kach theke input ney. Report e keyboard input hishebe 25 dewa hoyeche, 'age' variable e jomeche.
+# input: 25
+dhori age = nao("Boyosh koto? ")
+
+# title: 12. Length -> lomba
+# note: Text er okkhor sonkha. "UITS" e 4 ta okkhor.
+lomba("UITS")
+
+# title: 13. Reverse -> ulta
+# note: Text ulte dey.
+ulta("UITS")
+
+# title: 14. Sort -> sajao
+# note: List choto theke boro sajay. Notun sajano list dey, marks nijer ager moto thake.
+sajao(marks)
+
+# title: 15. Search -> khojo
+# note: 95 list er kon position e ache (0 theke gona). Na pele -1.
+khojo(marks, 95)
+
+# title: 16. Count -> gono
+# note: 85 list e koybar ache.
+gono(marks, 85)
+
+# title: 17. Compare -> melao
+# note: 5 chhoto 9 theke, tai -1. Soman hole 0, boro hole 1.
+melao(5, 9)
+
+dhori x = 1
+dhori y = 2
+# title: 18. Swap -> bodol
+# note: Age x = 1, y = 2 chhilo. bodol duita variable er nam nei ar tader man adol-bodol kore (tai Var node, Num na).
+bodol(x, y)
+
+# title: 19. Delete -> mucha
+# note: marks list theke 60 muche dey. Niche 'Variable gulo ekhon' e marks dekho.
+mucha(marks, 60)
+
+# title: 20. Clear -> saf
+# note: Variable er sob data muche khali kore dey.
+saf(marks)
+
+# title: 21. Sum -> mot
+# note: List er shob number jog kore. gor (average) er age ei jog-fol ta-i bhag hoy.
+mot([10, 20, 30])
+
+# title: 22. Square -> borgo
+# note: Number ke nijer diye gun kore. 5 * 5 = 25.
+borgo(5)
+
+# title: 23. Square root -> mul
+# note: Borgo er ulta. 16 er mul 4, karon 4 * 4 = 16. Negative number dile error dey.
+mul(16)
+
+# title: 24. Round -> gol
+# note: Doshomik number ke nikotom purno songkhay ney. 3.6 hoye jay 4.
+gol(3.6)
+
+# title: 25. Absolute -> porom
+# note: Minus chinho bad dey. Parser -7 ke Neg node (minus) banay, tar niche 7.
+porom(-7)
+
+# title: Extra: jodi (condition)
+# note: If node er 3 ta shakha: condition (x > 1), tahole block, nahole block. x ekhon 2, tai tahole chole.
+jodi x > 1 tahole
+    dekhao("x boro")
+nahole
+    dekhao("x choto")
+sesh
+
+dhori i = 1
+# title: Extra: jotokhon (loop)
+# note: While node: condition (i <= 3) ar koro block. Block er vitore dekhao ar i = jog(i, 1) cholte thake.
+jotokhon i <= 3 koro
+    dekhao(i)
+    i = jog(i, 1)
+sesh

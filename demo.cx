@@ -1,0 +1,62 @@
+# CompileX demo - proposal er sob 20 ta function
+
+dekhao("--- Math ---")
+dekhao("Jog(10, 5)     =", jog(10, 5))
+dekhao("Biyog(10, 5)   =", biyog(10, 5))
+dekhao("Gun(10, 5)     =", gun(10, 5))
+dekhao("Vag(10, 4)     =", vag(10, 4))
+dekhao("Vagsesh(10, 3) =", vagsesh(10, 3))
+dekhao("Ghat(2, 8)     =", ghat(2, 8))
+
+dhori marks = [70, 85, 60, 95, 85]
+dekhao("--- List ---")
+dekhao("marks          =", marks)
+dekhao("Gor            =", gor(marks))
+dekhao("Boro           =", boro(marks))
+dekhao("Choto          =", choto(marks))
+dekhao("Lomba          =", lomba(marks))
+dekhao("Sajao          =", sajao(marks))
+dekhao("Ulta           =", ulta(marks))
+dekhao("Khojo(95)      =", khojo(marks, 95))
+dekhao("Gono items     =", gono(marks))
+dekhao("Gono(85)       =", gono(marks, 85))
+
+dekhao("--- Text ---")
+dhori naam = "UITS"
+dekhao("Lomba(naam)    =", lomba(naam))
+dekhao("Ulta(naam)     =", ulta(naam))
+
+dekhao("--- Compare / Swap ---")
+dekhao("Melao(5, 9)    =", melao(5, 9))
+dhori x = 1
+dhori y = 2
+bodol(x, y)
+dekhao("Bodol: x =", x, " y =", y)
+
+dekhao("--- Delete / Clear ---")
+mucha(marks, 60)
+dekhao("Mucha(60)      =", marks)
+saf(marks)
+dekhao("Saf            =", marks)
+
+dekhao("--- Extra 5 ta ---")
+dekhao("Mot([10,20,30]) =", mot([10, 20, 30]))
+dekhao("Borgo(5)        =", borgo(5))
+dekhao("Mul(16)         =", mul(16))
+dekhao("Gol(3.6)        =", gol(3.6))
+dekhao("Porom(-7)       =", porom(-7))
+
+dekhao("--- Condition + Loop ---")
+dhori i = 1
+jotokhon i <= 5 koro
+    jodi vagsesh(i, 2) == 0 tahole
+        dekhao(i, "jora")
+    nahole
+        dekhao(i, "bijor")
+    sesh
+    i = jog(i, 1)
+sesh
+
+# Input dekhte niche er 3 line uncomment koro:
+# dhori n = nao("Tomar nam: ")
+# dekhao("Hello", n)

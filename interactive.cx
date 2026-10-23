@@ -1,0 +1,59 @@
+# Interactive demo - sob input user dibe (nao diye)
+
+dekhao("=== CompileX Calculator ===")
+dhori a = nao("Prothom number: ")
+dhori b = nao("Ditiyo number: ")
+dekhao("Jog     =", jog(a, b))
+dekhao("Biyog   =", biyog(a, b))
+dekhao("Gun     =", gun(a, b))
+dekhao("Vag     =", vag(a, b))
+dekhao("Vagsesh =", vagsesh(a, b))
+dekhao("Ghat    =", ghat(a, b))
+dekhao("Boro    =", boro(a, b))
+dekhao("Choto   =", choto(a, b))
+dekhao("Melao   =", melao(a, b))
+bodol(a, b)
+dekhao("Bodol   : a =", a, " b =", b)
+
+dekhao("")
+dekhao("=== List ===")
+dhori n = nao("Koyta number debe? ")
+dhori list = []
+dhori i = 1
+jotokhon i <= n koro
+    dhori x = nao("Number dao: ")
+    list = list + [x]
+    i = jog(i, 1)
+sesh
+dekhao("List   =", list)
+dekhao("Sajao  =", sajao(list))
+dekhao("Ulta   =", ulta(list))
+dekhao("Mot    =", mot(list))
+dekhao("Gor    =", gor(list))
+dekhao("Boro   =", boro(list))
+dekhao("Choto  =", choto(list))
+dhori k = nao("Konta khujbe? ")
+dekhao("Khojo  =", khojo(list, k), " (-1 mane nai)")
+dekhao("Gono   =", gono(list, k), "bar ache")
+mucha(list, k)
+dekhao("Mucha  =", list)
+saf(list)
+dekhao("Saf    =", list)
+
+dekhao("")
+dekhao("=== Extra 4 ta function ===")
+dhori m = nao("Ekta number dao (doshomik/minus hote pare): ")
+dekhao("Borgo  =", borgo(m))
+jodi m >= 0 tahole
+    dekhao("Mul    =", mul(m))
+nahole
+    dekhao("Mul    = minus number er mul hoy na")
+sesh
+dekhao("Gol    =", gol(m))
+dekhao("Porom  =", porom(m))
+
+dekhao("")
+dekhao("=== Text ===")
+dhori naam = nao("Tomar nam: ")
+dekhao("Lomba  =", lomba(naam))
+dekhao("Ulta   =", ulta(naam))
